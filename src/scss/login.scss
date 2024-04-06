@@ -1,0 +1,17 @@
+@import "./cta";
+@import "./mixins";
+@import "./templaytes/cards";
+@import "./templaytes/btn";
+@import './components/main/login/login';
+
+.main{
+    height: 100vh;
+    
+    display: grid;
+    place-items: center;
+
+    background-image: url(../img/bg/bg-login.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,109 @@
+@import '../../../cta';
+@import '../../../mixins';
+
+.login{
+    width: 34.5rem;
+    height: 67.2rem;
+    padding: 1.1rem;
+    border-radius: 2rem;
+    background: $clr-bg-body;
+    text-align: center;
+    @include respond-to('phone'){
+        color: $clr-bg-body;
+        backdrop-filter: blur(10px);
+        background: #00000080;
+    }
+    .title-login{
+        margin-top: 4rem;
+        font-size: $font-size-xs;
+        font-weight: 700;
+    }
+    input{
+        width: 100%;
+        margin-top: 5rem;
+        font-size: $font-size-x;
+        &::placeholder{
+            font-weight: 700;
+            color: $clr-primary-gray;
+        }
+        @include respond-to('phone'){
+            &::placeholder{
+                color: $clr-bg-body;
+            }
+        }
+    }
+    .question{
+        display: block;
+        margin-top: 3.5rem;
+        font-size: $font-size-m;
+        color: $clr-primary-brown;
+        @include respond-to('phone'){
+            color: $clr-bg-body;
+        }
+    }
+    .btn--login{
+        margin-top: 3.5rem;
+    }
+    .btn--account{
+        margin-top: 2rem;
+    }
+    .society{
+        margin-top: 7.4rem;
+        .society-title{
+            font-size: $font-size-m;
+        }
+        .social{
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            .ok{
+                width: 4rem;
+                height: 4rem;
+                padding-top: .4rem;
+                font-size: $font-size-x;
+                background: $clr-primary-brown;
+                color: $clr-white;
+                &:hover{
+                    transform: rotate(360deg);
+                }
+                @include respond-to('phone'){
+                    background: $clr-bg-body;
+                    color: $clr-primary-brown;
+                }
+            }
+            .vk{
+                width: 4rem;
+                height: 4rem;
+                padding-top: .4rem;
+                font-size: $font-size-x;
+                background: $clr-primary-brown;
+                color: $clr-white;
+                &:hover{
+                    transform: rotate(360deg);
+                }
+                @include respond-to('phone'){
+                    background: $clr-bg-body;
+                    color: $clr-primary-brown;
+                }
+            }
+            .google{
+                width: 4rem;
+                height: 4rem;
+                padding-top: .4rem;
+                font-size: $font-size-x;
+
+                background: $clr-primary-brown;
+                color: $clr-white;
+                transition: $transition-fast;
+                &:hover{
+                    transform: rotate(360deg);
+                }
+                @include respond-to('phone'){
+                    background: $clr-bg-body;
+                    color: $clr-primary-brown;
+                }
+            }
+        }
+    }
+}

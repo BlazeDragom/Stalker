@@ -1,0 +1,78 @@
+@import "../cta";
+@import "../mixins";
+
+.btn{
+    display: inline-block;
+    padding: 1.9rem 12.7rem;
+    background: $clr-primary-yellow;
+    font-size: $font-size-xs;
+    font-family: "Montserrat", sans-serif;
+    color: $clr-white;
+    transition: $transition-fast;
+    &:hover{
+        transform: scale(1.05);
+    }
+    &:active{
+        @include click
+    }
+}
+
+@media screen and (max-width:375px) {
+    .btn{
+        padding: 1.4rem 6.4rem;
+        font-size: $font-size-x;
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+}
+
+
+.btn--login{
+    display: inline-block;
+    padding: 1.4rem 11.3rem;
+    background: $clr-primary-yellow;
+    font-size: $font-size-x;
+    font-family: "Montserrat", sans-serif;
+    color: $clr-white;
+    transition: $transition-fast;
+    &:hover{
+        transform: scale(1.05);
+    }
+    &:active{
+        @include click
+    }
+}
+
+.btn--account{
+    display: inline-block;
+    padding: 1.4rem 4.3rem;
+    background: $clr-light-yellow;
+    font-size: $font-size-x;
+    font-family: "Montserrat", sans-serif;
+    color: $clr-white;
+    transition: $transition-fast;
+    word-spacing: 1.6rem;
+    &:hover{
+        transform: scale(1.05);
+    }
+    &:active{
+        @include click
+    }
+} 
+
+.btn--registration{
+    display: inline-block;
+    padding: 1.4rem 4.3rem;
+    background: $clr-primary-yellow;
+    font-size: $font-size-x;
+    font-family: "Montserrat", sans-serif;
+    color: $clr-white;
+    transition: $transition-fast;
+    &:hover{
+        transform: scale(1.05);
+    }
+    &:active{
+        @include click
+    }
+}

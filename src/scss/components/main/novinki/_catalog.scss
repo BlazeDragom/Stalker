@@ -1,0 +1,62 @@
+@import '../../../cta';
+@import '../../../mixins';
+
+.main-holder{
+    @include flex-row(space-between, top);
+    margin-top: 2rem;
+}
+
+.catalog{
+    width: 116.2rem;
+    .cards-holder{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 4.2rem;
+        column-gap: 2rem;
+    }
+    .show-more{
+        @include flex-column();
+        margin-top: 10rem;
+        .text{
+            font-size: $font-size-l;
+            word-spacing: 1rem;
+        }
+        .bar{
+            position: relative;
+            width: 21.7rem;
+            height: .7rem;
+            margin-top: 1rem;
+            border-radius: $radius;
+            background: $clr-white;
+            &:before{
+                content: "";
+                width: 9.8rem;
+                height: .7rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background: $clr-primary-yellow;
+                border-radius: $radius;
+            }
+        }
+        .btn--catalog{
+            margin-top: 3.6rem;
+            margin-bottom: 10rem;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .catalog{
+        width: 35.5rem;
+        .cards-holder{
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 1.5rem;
+            row-gap: 2rem;
+            place-items: center;
+        }
+        
+
+    }
+}

@@ -1,0 +1,26 @@
+@import '../../../cta';
+@import '../../../mixins';
+
+.left-side{
+    width: 21.5rem;
+    height: 108rem;
+    padding: 3rem 2rem;
+    @include flex-column(top);
+    gap: 2rem;
+    @include respond-to('phone'){
+        display: none;
+    }
+    .nav-list{
+        display: block;
+        font-size: $font-size-m;
+        font-weight: 600;
+        color: $clr-primary-brown;
+        transition: $transition-fast;
+        &:hover{
+            color: $clr-hover-yellow;
+        }
+        &:active{
+            @include click();
+        }
+    }
+}

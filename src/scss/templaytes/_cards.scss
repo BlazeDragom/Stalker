@@ -1,0 +1,52 @@
+@import "../cta";
+@import "../mixins";
+
+.card{
+    width: 25rem;
+    height: 35rem;
+    padding: 1rem 1.2rem 1.6rem 1.2rem;
+    background: $clr-white;
+    transition: $transition-fast;
+    .text{
+        height: 6.8rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        font-size: $font-size-m;
+        color: $clr-primary-brown;
+    }
+    .cost-bookmark{
+        @include flex-row();
+        margin: 0 1.3rem;
+        .cost{
+            font-size: $font-size-l;
+            font-weight: 700;
+            color: $clr-primary-brown;
+        }
+        .flag{
+            font-size: $font-size-l;
+            font-weight: 700;
+            color: $clr-primary-yellow;
+        }
+    }
+    &:hover{
+        transform: scale(1.05) translateY(-1rem);
+        box-shadow: 1px 2px 10px 0px $clr-secondary-gray ;
+    }
+    &:active{
+        @include click();
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card{
+        width: 17rem;
+        height: 27.9rem;
+        &:hover{
+            transform: none;
+        }
+        .cost-bookmark{
+            margin: 0;
+            margin-top: 1.4rem;
+        }
+    }
+}

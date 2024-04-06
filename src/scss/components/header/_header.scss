@@ -1,0 +1,42 @@
+@import "../../cta";
+@import "../../mixins";
+
+.header{
+    .header__top{
+        height: 8.8rem;
+        @include flex-row();
+        padding: 2.2rem;
+        background: $clr-primary-brown;
+        .header_holder{
+            @include flex-row();
+            .catalog{
+                @include flex-row();
+                .burger_menu{
+                    position: relative;
+                    #checkbox{
+                        width: 2.6rem;
+                        height: 2rem;
+                        outline: none;
+                        appearance: none;
+                    }
+                    label{
+                        display: flex;
+                        flex-direction: column;
+                        gap: .3rem;
+                        position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                        .line{
+                            width: 2.6rem;
+                            height: .3rem;
+                            background: $clr-bg-body;
+                            border-radius: $radius;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
